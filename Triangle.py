@@ -56,5 +56,4 @@ def classify_triangle(new_a, new_b, new_c):
         return 'Right'
     if new_a != new_b and new_b != new_c and return_statement != 'Right':
         return 'Scalene'
-    else:
-        return "Isoceles"
+    return 'Isoceles'

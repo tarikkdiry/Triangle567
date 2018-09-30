@@ -9,7 +9,7 @@ The primary goal of this file is to demonstrate a simple python program to class
 @author: rk
 """
 
-def classifyTriangle(new_a, new_b, new_c):
+def classify_triangle(new_a, new_b, new_c):
     """
     Your correct code goes here...  Fix the faulty logic below until the code passes all of
     you test cases.
@@ -54,7 +54,8 @@ def classifyTriangle(new_a, new_b, new_c):
         return_statement = 'Equilateral'
     elif ((new_a ** 2) + (new_b ** 2)) == (new_c ** 2):
         return_statement = 'Right'
-    elif ((new_a != new_b) and (new_b != new_c)):
+    elif not new_a == new_b and not new_b == new_c and not return_statement == 'Equilateral':
         return_statement = 'Scalene'
     else:
-        return return_statement
+        return_statement = "Isoceles"
+    return return_statement

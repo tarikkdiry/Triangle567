@@ -17,30 +17,29 @@ from Triangle import classifyTriangle
 class TestTriangles(unittest.TestCase):
     # define multiple sets of tests as functions with names that begin
 
-    def testRightTriangleA(self): 
+    def test_right_triangle_a(self):
         self.assertEqual(classifyTriangle(3,4,5),'Right', '3,4,5 is a Right triangle')
 
-    def testRightTriangleB(self): 
+    def test_right_triangle_b(self):
         self.assertEqual(classifyTriangle(9,12,15),'Right','9,12,15 is a Right triangle')
 
-    def testRightTriangleC(self): 
+    def test_right_triangle_c(self):
         self.assertEqual(classifyTriangle(9,12,15), 'Right','9,12,15 is a Right triangle')
-        
-    def testEquilateralTriangles(self): 
+
+    def test_equilateral_triangles(self):
         self.assertEqual(classifyTriangle(1,1,1),'Equilateral','1,1,1 should be equilateral')
-    
-    def testScaleneTriangleA(self): 
+
+    def test_scalene_triangle_a(self):
         self.assertEqual(classifyTriangle(1,2,3), 'Scalene')
 
-    def testScaleneTriangleB(self): 
+    def test_scalene_triangle_b(self):
         self.assertEqual(classifyTriangle(100,200,300), 'InvalidInput')
-    
-    def testIsoscelesTriangleA(self): 
+
+    def test_isosceles_triangle_a(self):
         self.assertEqual(classifyTriangle(3,15,15), 'Isoceles','9,15,15 is an Isoceles triangle')
 
-    def testIsoscelesTriangleB(self): 
+    def test_isosceles_triangle_b(self):
         self.assertEqual(classifyTriangle(100,300,300), 'InvalidInput')
-    
 
 if __name__ == '__main__':
     print('Running unit tests')

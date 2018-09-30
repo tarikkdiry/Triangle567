@@ -51,11 +51,10 @@ def classify_triangle(new_a, new_b, new_c):
     # now we know that we have a valid triangle
     return_statement = ""
     if new_a == new_b and new_b == new_c:
-        return_statement = 'Equilateral'
-    elif ((new_a ** 2) + (new_b ** 2)) == (new_c ** 2):
-        return_statement = 'Right'
-    elif not new_a == new_b and not new_b == new_c and not return_statement == 'Equilateral':
-        return_statement = 'Scalene'
+       return 'Equilateral'
+    if ((new_a ** 2) + (new_b ** 2)) == (new_c ** 2):
+        return 'Right'
+    if new_a != new_b and new_b != new_c and return_statement != 'Right':
+        return 'Scalene'
     else:
-        return_statement = "Isoceles"
-    return return_statement
+        return "Isoceles"
